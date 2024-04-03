@@ -1,5 +1,8 @@
 # Kampadejo
 TP4 - une navigation accessible
 
-merci à Yves Hélie
-pour son importante contribution à cette cause.
+- début avril 2024 -
+
+
+<small>merci à Yves Hélie
+pour son importante contribution à cette cause.</small>

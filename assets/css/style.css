@@ -341,6 +341,11 @@ template {
     * Blanc avec effet de transparence :
     * Valeur de border-radius des éléments :
     */
+    --color-text: #fff;
+    --color-Y: #dba70d;
+    --color-G: rgba(255, 255, 255, 0.25);
+    --font-family: Raleway, sans-serif;
+    --border: 3px solid #dba70d;
 }
 
 /*** Clearfix ***/
@@ -419,7 +424,7 @@ abbr[title] {
  */
 /** Polices **/
 body {
-  font-family: Raleway, sans-serif;
+  font-family: var(----font-family);
 }
 
 h1,
@@ -619,7 +624,7 @@ h4,
 
 .nav__span {
   font-weight: bold;
-  color: #fff;
+  color: var(--color-text);
 }
 
 @media (min-width: 600px) {
@@ -629,7 +634,7 @@ h4,
 }
 .nav__control:hover,
 .nav__control:active {
-  color: #fff;
+  color: var(--color-text);
   background-color: rgba( 255, 255, 255, 0.25);
 }
 
@@ -646,7 +651,7 @@ h4,
    * de modifier l'apparence du outline par défaut des navigateurs.
    */
   outline-offset: -5px;
-  outline: #dba70d auto 5px;
+  outline: var(--color-Y) auto 5px;
 }
 
 .nav__control:before {
@@ -655,10 +660,14 @@ h4,
   width: 1em;
   height: 1em;
   /* compléter pour afficher l’icône X */
+  background: url(../images/ico-fermer.svg);
+  background-position: center center;
 }
 
 .nav--closed .nav__control:before {
   /* compléter pour afficher l’icône Hamburger */
+  background: url(../images/ico-menu.svg);
+  background-position: center center;
 }
 
 /* Liste du menu */
@@ -695,16 +704,16 @@ h4,
 }
 
 .nav__link:hover {
-  color: #dba70d;
+  color: var(--color-Y);
   /* background-color: darkmagenta; */
 }
 
 .nav__link:active {
-  color: #fff;
+  color: var(--color-text);
 }
 
 .nav__link:focus {
-  border-left: #dba70d solid 5px;
+  border-left: var(--border);
 }
 
 /** Une classe nav__link--active
@@ -723,7 +732,7 @@ h4,
 
   .nav__link:focus {
     border-left: none;
-    border-bottom: #dba70d solid 5px;
+    border-bottom: var(--border);
   }
 }
 /* L'ajout par JavaScript de la classe .js
@@ -749,14 +758,14 @@ h4,
  *********************************************/
 /* Règles générales */
 * {
-  outline-color: #dba70d;
+  outline-color: var(--color-Y);
 }
 
 .sauter {
   outline: none;
   background-color: #222222;
-  border-bottom: 3px solid #dba70d;
-  color: #ffffff;
+  border-bottom: var(--border);
+  color: var(--color-text);
   display: block;
   padding: 0.25em 0;
   text-align: center;
@@ -777,25 +786,25 @@ a {
 }
 
 .btn {
-  border: 3px solid rgba(255, 255, 255, 0.25);
+  border: 3px solid var(--color-G);
   border-radius: 5px;
   display: inline-block;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--color-text);
   padding: 0.5em 1em;
   text-decoration: none;
   transition: background-color 0.5s;
 }
 
 .btn:hover {
-  background-color: #dba70d;
-  border-color: #dba70d;
+  background-color: var(--color-Y);
+  border-color: var(--color-Y);
   color: #000;
 }
 
 .btn:focus {
   outline: 0;
-  border-color: #dba70d;
+  border-color: var(--color-Y);
 }
 
 .icone {
@@ -831,7 +840,7 @@ figure img {
 }
 
 figcaption {
-  border-bottom: 5px solid #dba70d;
+  border-bottom: var(--border);
   font-size: 1.25rem;
   margin-top: 10px;
   padding-bottom: 10px;
@@ -841,7 +850,7 @@ figcaption {
 .entete {
   background: url(../images/entete-mobile.jpg) center top no-repeat;
   background-size: cover;
-  color: #ffffff;
+  color: var(--color-text);
   padding: 10px 0;
   text-align: center;
 }
@@ -918,7 +927,7 @@ figcaption {
 }
 
 .entreprise h2:after {
-  background-color: #dba70d;
+  background-color: var(--color-Y);
   content: "";
   display: inline-block;
   width: 100px;
@@ -936,7 +945,7 @@ figcaption {
 }
 
 .experiences article {
-  background-color: #ffffff;
+  background-color: var(--color-text);
   border-radius: 5px;
 }
 
@@ -960,7 +969,7 @@ figcaption {
 }
 
 .experiences article h3:after {
-  background-color: #dba70d;
+  background-color: var(--color-Y);
   content: "";
   display: inline-block;
   width: 30%;
@@ -977,11 +986,11 @@ figcaption {
 }
 
 .service {
-  border-top: 5px solid #dba70d;
+  border-top: var(--border);
 }
 
 .service:last-of-type {
-  border-bottom: 5px solid #dba70d;
+  border-bottom: var(--border);
 }
 
 .service h3 {
@@ -1040,7 +1049,7 @@ footer .h2 {
 }
 
 .informations a {
-  border-bottom: 2px solid #dba70d;
+  border-bottom: var(--border);
   color: #000000;
   font-weight: bold;
   text-decoration: none;
@@ -1064,7 +1073,7 @@ footer .h2 {
 }
 .copyright {
   text-align: center;
-  background-color: #ffffff;
+  background-color: var(--color-text);
   margin: 0;
   padding: 16px 0;
 }
